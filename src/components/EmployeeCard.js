@@ -2,15 +2,15 @@ import React from "react";
 
 
 function EmployeeCard(props) {
+  console.log(props);
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={props.name} src={props.photo} />
       </div>
       <div className="content">
            <p> <strong>Name:</strong> {props.name}</p>
-           <p><strong>Title:</strong> {props.title}</p>
-           <p><strong>Address:</strong> {props.location}</p> 
+           <p><strong>Address:</strong> {props.location.city, props.location.state}</p>
       </div>
     </div>
   );

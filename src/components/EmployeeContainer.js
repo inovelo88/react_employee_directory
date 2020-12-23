@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import EmployeeCard from "./EmployeeCard";
 import EmployeeList from "./EmployeeList";
 import API from "../utils/API";
 import Row from "./Row";
@@ -22,10 +21,13 @@ class EmployeeContainer extends Component {
 
   searchEmployees = () => {
     API.search()
-      .then(res =>
-        this.setState({ result: res.data.results}))
+      .then(res =>{
+        console.log("API data", res.data.results);
+        this.setState({ result: res.data.results})
+        console.log(this.state.result)
+      })
       .catch(err => console.log(err));
-      console.log(this.state.result)
+     
   };
 
   handleInputChange = event => {
@@ -67,6 +69,7 @@ class EmployeeContainer extends Component {
               </Card>
             </Col>
             {this.state.result.length > 0 ? <EmployeeList data = {this.state.result}/> : <h3>No Results to Display</h3>}
+
             
           </Row>
         </Container>
@@ -74,15 +77,6 @@ class EmployeeContainer extends Component {
     );
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 
