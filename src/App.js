@@ -1,6 +1,4 @@
 import React from 'react';
-import EmployeeCard from './components/EmployeeCard';
-import EmployeeList from './components/EmployeeList';
 import Container from './components/EmployeeContainer';
 
 

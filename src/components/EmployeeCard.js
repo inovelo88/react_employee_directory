@@ -10,7 +10,10 @@ function EmployeeCard(props) {
       </div>
       <div className="content">
            <p> <strong>Name:</strong> {props.name}</p>
-           <p><strong>Address:</strong> {props.location.city, props.location.state}</p>
+           <p> <strong>DOB:</strong> {props.dob.date}</p>
+           <p><strong>Address:</strong> {props.location}</p>
+           <p> <strong>Email:</strong> {props.email}</p>
+           <p> <strong>Phone:</strong> {props.phone}</p>
       </div>
     </div>
   );

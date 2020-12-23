@@ -6,13 +6,15 @@ function EmployeeList({ data }) {
     <>
 
       {data[0] !== undefined && data[0].name !== undefined ? (
-        data.map(({ login, name, picture, location, email, dob }) => {
+        data.map(({ dob, name, picture, location, email, phone}) => {
           return (
             <EmployeeCard
             photo={picture.medium}
-            name={name.first}
-            location={location}
+            name={name.first + " " + name.last}
+            dob={dob}
+            location={location.city + ", " + location.state}
             email={email}
+            phone={phone}
             />
           );
         })

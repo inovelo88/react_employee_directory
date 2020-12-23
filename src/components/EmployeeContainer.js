@@ -46,34 +46,16 @@ class EmployeeContainer extends Component {
 
   render() {
     return (
-      // Pass state and the two form handler functions into the provider
-      // <EmployeeContext.Provider 
-      //   value={{
-      //     ...this.state, 
-      //     handleInputChange: this.handleInputChange, 
-      //     handleFormSubmit: this.handleFormSubmit
-      //   }}
-      // >
         <Container>
           <Row>
-            {/* <Col size="md-8">
-              <Card
-                heading={this.state.result.Title || "Search for an Employee"}
-              >
-                {this.state.result.Title ? <EmployeeList /> : <h3>No Results to Display</h3>}
-              </Card>
-            </Col> */}
             <Col size="md-4">
               <Card heading="Search">
                 <SearchForm />
               </Card>
             </Col>
             {this.state.result.length > 0 ? <EmployeeList data = {this.state.result}/> : <h3>No Results to Display</h3>}
-
-            
           </Row>
         </Container>
-      // </EmployeeContext.Provider>
     );
   }
 }
