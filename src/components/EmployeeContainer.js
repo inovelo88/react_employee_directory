@@ -47,9 +47,9 @@ class EmployeeContainer extends Component {
   render() {
     return (
         <Container>
-          <Row>
-            <Col size="md-4">
-              <Card heading="Search">
+          <Row size="md-12">
+            <Col size="md-12">
+              <Card heading="Search Employee">
                 <SearchForm />
               </Card>
             </Col>

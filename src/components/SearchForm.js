@@ -2,7 +2,6 @@ import React from "react";
 
 function SearchForm({ search, handleInputChange, handleFormSubmit }) {
     return (
-        // Use consumer to capture state.search and form handler functions
         <div>
             <form>
                 <div className="form-group">

@@ -1,7 +1,13 @@
 import React from "react";
 
 function Row(props) {
-  return <div className={`row${props.fluid ? "-fluid" : ""}`}>{props.children}</div>;
+  const size = props.size.split(" ").map(size => "row-" + size).join(" ");
+
+  return (
+    <div className={size}>
+      {props.children}
+    </div>
+  );
 }
 
 export default Row;
