@@ -49,7 +49,7 @@ class EmployeeContainer extends Component {
         <Container>
           <Row size="md-12">
             <Col size="md-12">
-              <Card heading="Search Employee">
+              <Card heading="Employee Directory">
                 <SearchForm />
               </Card>
             </Col>
